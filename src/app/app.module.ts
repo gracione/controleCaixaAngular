@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router'; // Importe RouterModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
 import { EstabelecimentoComponent } from './estabelecimento/estabelecimento.component';
 import { HomeComponent } from './home/home.component';
 
@@ -20,7 +20,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes) // Configure as rotas aqui
   ],
   providers: [],
   bootstrap: [AppComponent]
